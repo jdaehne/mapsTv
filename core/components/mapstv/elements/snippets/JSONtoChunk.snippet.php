@@ -9,7 +9,7 @@
  * @author Sterc <modx+mapstv@sterc.nl>
  */
 $output = $input;
-$array = $modx->fromJSON($input);
+$array = (array) $modx->fromJSON($input);
 if (count($array) > 0) {
     $chunk = $modx->getObject('modChunk', array('name' => $options));
     if ($chunk) {
